@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Tester</title>
+<style>
+header {
+  background-color: #ff0000;
+  font-size: 15px;
+  color: #black;
+   margin-top: 10px;
+   padding: 10px;
+   
+ }
+  .logo {
+  border-style: solid; 
+  border-width: 2px;
+  border-color: white;
+  display: block;
+  margin-top: 18px;
+   position: absolute;
+   margin-left: 25px;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+   border-radius: 0%;
+  
+}
+ .logo:hover {
+  opacity: 50%;
+  }
+  
+  
+.navigation {
+  list-style-type: none;
+
+  color: white;
+   font-size: 20px;
+  opacity: 0.65;
+  padding: 5px;
+  font-family: Snell Roundhand, cursive;
+}
+.center {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+    display: flex;
+}
+.floater {
+float: left;
+position: absolute;
+}
+.navigation li a {
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  color: #ccc;
+}
+ h1 {
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.5;
+  padding: 15px;  
+  color: black;
+  }
+ h2 {
+  font-size: 20px;
+  opacity: 0.65;
+  padding: 5px;
+  font-family: Snell Roundhand, cursive;
+  }
+  
+body {
+margin: 5px;
+}
+
+.distributers { 
+	 border-radius: 50%;
+	 border-style: solid;
+	 border-width: 3px;
+	 border-color: black;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* Orbit container */
+.orbit-system {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 80px auto;
+}
+
+/* Center circle */
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: #ff1f1f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Bubbles */
+.orbit-bubble {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 0%;
+    left: 20%;
+}
+.orbit-bubble1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 0%;
+    right: 20%;
+}
+.orbit-bubble2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 25%;
+    right: -2%;
+}
+.orbit-bubble3 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 58%;
+    left: 75%;
+}
+.orbit-bubble4 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 79%;
+    left: 47%;
+}
+.orbit-bubble5 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+	top: 0%;
+    left: 20%;
+}
+
+/* Bubble images */
+.orbit-bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.orbit-bubble1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.orbit-bubble2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.orbit-bubble3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.orbit-bubble4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.orbit-bubble5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Hover effect */
+.orbit-bubble:hover {
+    transform: scale(1.2);
+}
+.orbit-bubble1:hover {
+    transform: scale(1.2);
+}
+.orbit-bubble2:hover {
+    transform: scale(1.2);
+}
+.orbit-bubble3:hover {
+    transform: scale(1.2);
+}
+.orbit-bubble4:hover {
+    transform: scale(1.2);
+}
+.orbit-bubble5:hover {
+    transform: scale(1.2);
+}
+
+
+
+.rotation
+{
+margin-left: 50px;
+}
+</style>
+<!--
+<script>
+console.log("Bubbles found:", bubbles.length);
+const bubbles = document.querySelectorAll(".orbit-bubble");
+const centerX = 200;
+const centerY = 200;
+const radius = 200;
+const speed = 0.7;
+
+bubbles.forEach((bubble, i) => {
+    let angle = (2 * Math.PI / bubbles.length) * i;
+
+    function animate() {
+        const x = centerX + Math.cos(angle) * radius - 20;
+        const y = centerY + Math.sin(angle) * radius - 20;
+
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+
+        angle += 0.01 * speed;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
+</script>
+-->
+</head>
+<body style="background-color: white">
+<header>
+  <div class="navigation">
+  <div class="floater">
+  
+  <li><a href="index.html"> Dealmaster </a></li>
+  </div>
+  
+  <div class="center">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="https://www.tiktok.com/@master0fdeals">TikTok</a></li>
+  <li><a href="#about">About</a></li>
+</div>
+</div>
+</header>
+
+
+<div class="orbit-system">
+    <div class="center-circle">Top Deals</div>
+
+    <a class="orbit-bubble" href="https://www.walmart.com/"><img src="new-Walmart-logo-02.png" alt="Avatar" width="115" height="115"></a>
+	<a class="orbit-bubble1" href="https://www.amazon.com/"><img src="amazon-logo-transparent-background-9.png" alt="Avatar" width="115" height="115"></a>
+	<a class="orbit-bubble2" href="https://www.costco.com/"><img src="Costco-Logo-PNG-Photo.png" alt="Avatar" width="115" height="115"></a>
+	<a class="orbit-bubble3" href="https://www.homedepot.com/"><img src="Home-Depot-Symbol.png" alt="Avatar" width="115" height="115"></a>
+	<a class="orbit-bubble4" href="https://www.target.com/"><img src="target-logo-vector-11574033124yqyshom7eg.png" alt="Avatar" width="115" height="115"></a>
+<!-- ADDITION 5	<a class="orbit-bubble5" href="https://www.costco.com/"><img src="Costco-Logo-PNG-Photo.png" alt="Avatar" width="115" height="115"></a>
+-->
+</div>
+<!--
+<h1> Deal Master </h1>
+
+  <img src="IMG_5294.jpg" alt="Avatar" width="78.4375" height="52.4375" class="logo">
+  
+  
+  <div>
+  <h1> Supported Stores </h1>
+	  <div class="center">
+<a href="https://www.walmart.com/"><img src="new-Walmart-logo-02.png" alt="Avatar" width="115" height="115" class="distributers"></a>
+<a href="https://www.amazon.com/"><img src="amazon-logo-transparent-background-9.png" alt="Avatar" width="115" height="115" class="distributers"></a>
+<a href="https://www.costco.com/"><img src="Costco-Logo-PNG-Photo.png" alt="Avatar" width="115" height="115" class="distributers"></a>
+<a href="https://www.homedepot.com/"><img src="Home-Depot-Symbol.png" alt="Avatar" width="115" height="115" class="distributers"></a>
+<a href="https://www.target.com/"><img src="target-logo-vector-11574033124yqyshom7eg.png" alt="Avatar" width="115" height="115" class="distributers"></a>
+</div>
+
+</div>
+  -->
+</body>
+</html>
