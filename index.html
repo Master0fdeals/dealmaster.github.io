@@ -100,7 +100,7 @@ position: absolute;
 /* Orbit container */
 .orbit-system {
     position: relative;
-    height: 600px;
+    height: 500px;
 		width: 100%;
 	background-color: gray;
 }
@@ -156,7 +156,23 @@ position: absolute;
     font-weight: bold;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
-
+/* upper circle */
+.upper-circle {
+    position: absolute;
+    top: 0%;
+    left: 33.33%;
+    width: 33.33%;
+    height: 33.33%;
+    background: #ff1f1f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
 /* Bubbles */
 .orbit-bubble {
     position: absolute;
@@ -396,6 +412,7 @@ function searchText() {
     <div class="center-circle">|</div>
 	  <div class="left-circle">|</div>
 	    <div class="right-circle">|</div>
+		   <div class="upper-circle">|</div>
 
     <a class="orbit-bubble" href="https://www.walmart.com/" target="_blank"><img src="new-Walmart-logo-02.png" alt="Avatar" width="115" height="115"></a>
 	<a class="orbit-bubble1" href="https://www.amazon.com/" target="_blank"><img src="amazon-logo-transparent-background-9.png" alt="Avatar" width="115" height="115"></a>
